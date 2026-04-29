@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KAVITHA C.R OFFICIAL</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>KAVITHA C.R OFFICIAL</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/login">Lock</a>
+        <a href="/logout">Logout</a>
+    </nav>
+</header>
+
+<div class="upload-box">
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button>Upload</button>
+</form>
+</div>
+
+<div class="gallery">
+{% for file in files %}
+    <div class="card">
+        <a href="/uploads/{{file}}">{{file}}</a>
+    </div>
+{% endfor %}
+</div>
+
+</body>
+</html>

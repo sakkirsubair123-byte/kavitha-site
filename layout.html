@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KAVITHA C.R OFFICIAL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>KAVITHA C.R OFFICIAL</h1>
+    <p class="tagline">Notes • Knowledge • Creativity</p>
+</header>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+<footer>
+    <p>© 2026 Kavitha C.R</p>
+</footer>
+
+</body>
+</html>
